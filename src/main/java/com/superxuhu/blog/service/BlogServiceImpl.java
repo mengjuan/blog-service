@@ -17,4 +17,21 @@ public class BlogServiceImpl implements BlogService {
     public List<Article> getAllActiveArticles() {
         return articleRepository.findAllActiveArticles();
     }
+
+    @Override
+    public Article getArticleById(Integer id) {
+        return articleRepository.findById(id).get();
+    }
+
+    @Override
+    public void saveArticle(Article article) {
+        articleRepository.save(article);
+    }
+
+    @Override
+    public void deleteArticleById(Integer id) {
+        articleRepository.deleteById(id);
+    }
+
+
 }

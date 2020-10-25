@@ -6,6 +6,14 @@ import java.util.List;
 
 public interface BlogService {
 
-    public List<Article> getAllActiveArticles();
+    List<Article> getAllActiveArticles();
+
+    Article getArticleById(Integer id);
+
+    void saveArticle(Article article);
+
+    void deleteArticleById(Integer id);
+
+
 
 }
