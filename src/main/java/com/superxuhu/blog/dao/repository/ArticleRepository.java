@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface ArticleRepository extends CrudRepository<Article,Integer> {
-    @Query("select a from Article a where activeflag='Y'")
+    @Query("select a from Article a where activeflag='Y' order by entryDatetime desc")
     List<Article> findAllActiveArticles();
 }

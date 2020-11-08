@@ -13,6 +13,7 @@ public class BlogRestApi {
     @Autowired
     private BlogService blogService;
 
+
     @RequestMapping(value = "/articles",method = RequestMethod.GET)
     public List<Article> getArticles(){
         return blogService.getAllActiveArticles();

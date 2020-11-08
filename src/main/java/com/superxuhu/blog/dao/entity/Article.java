@@ -28,7 +28,6 @@ public class Article {
     @JsonIgnore
     @Column(name = "entry_id")
     private Integer entryId;
-    @JsonIgnore
     @Column(name="entry_datetime")
     private Timestamp entryDatetime;
 }
